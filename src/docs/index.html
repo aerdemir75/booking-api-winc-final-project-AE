@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Readme</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            background-color: rgb(168, 247, 65);
+            margin-left: 25%;
+            margin-top: 10%;
+            margin-right: 20%;
+            line-height: 1.4;
+        }
+
+        .docs {
+            border-style: solid;
+            border-width: 0.2px;
+            border-color: rgb(35, 241, 97);
+            border-radius: 20px;
+            padding: 25px;
+            padding-left: 50px;
+            box-shadow: 2px 2px 10px;
+            transition: all 0.5s;
+        }
+
+        .docs:hover {
+            box-shadow: 2px 2px 14px;
+            transition: all 0.5s;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: grey;
+        }
+
+        a {
+            padding-left: 10px;
+        }
+
+        p {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="docs">
+        <h1>****BOOKING API****</h1>
+        <p>Welcome to the booking API! With this API you can:</p>
+        <p>Update bookings<br>Update Hosts and Users<br>Update properties</p>
+        <p>The booking and user-update parts are protected with jwt-token and optional Auth0</p>
+        <p>Furthermore database connections are now established with Planetscale and Prisma</p>
+        <p>Try some of the GET requests endpoints:
+            <br><a href="./amenities" target="_blank">amenities</a>
+            <br><a href="./bookings" target="_blank">bookings</a>
+            <br><a href="./properties" target="_blank">properties</a>
+            <br><a href="./users" target="_blank">users</a>
+            <br><a href="./hosts" target="_blank">hosts</a>
+        </p>
+
+        <p>
+            To make Create, Update, and Delete you need a jwt-Token.
+            With POST login and password to get your jwt-Token. It is not accessible through GET
+            request. Try to open and copy the link in postman as a POST request with header {"username": "asimpson",
+            "password": "password234"} :
+            <a href="./login" target="_blank">login</a>
+        </p>
+
+        <p>
+            For more info visit: <a href="mailto:aerdemir75@gmail.com">target="_blank">Arif Erdemir</a>
+        </p>
+
+        
+    </div>
+</body>
+
+</html>
