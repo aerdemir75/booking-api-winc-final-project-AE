@@ -27,6 +27,16 @@ router.get('/:id', async (req, res) => {
     res.status(200).json(review);
 })
 
+router.get('/:id', async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const user = await getUsersById(id);
+        res.status(200).json(user);
+    } catch (error) {
+        next(error);
+    }
+}, notFoundErrorHandler)
+
 router.post('/', authMiddleware, async (req, res) => {
     const { userId, propertyId, rating, comment } = req.body;
     const newReview = await createNewReview(userId, propertyId, rating, comment);
